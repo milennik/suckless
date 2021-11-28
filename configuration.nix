@@ -48,15 +48,15 @@
 
   # Enable the GNOME Desktop Environment.
   services.xserver.displayManager.gdm.enable = true;
+  # services.xserver.displayManager.sddm.enable = true;
   # services.xserver.desktopManager.gnome.enable = true;
   services.xserver.windowManager.dwm.enable = true; 
+  
   nixpkgs.overlays = [
     (final: prev: {
       dwm = prev.dwm.overrideAttrs (old: { src = /home/nikola/repos/suckless/my-dwm ;});
     })
   ];
-
-
 
   # Configure keymap in X11
   services.xserver.layout = "us";
@@ -89,7 +89,7 @@
     docker
     pcmanfm
     dmenu
-    slstatus
+    (slstatus.overrideAttrs (_: { src = /home/nikola/repos/slstatus; }))
     nitrogen
     feh
     xterm
