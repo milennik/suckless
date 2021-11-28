@@ -89,7 +89,7 @@
     docker
     pcmanfm
     dmenu
-    (slstatus.overrideAttrs (_: { src = /home/nikola/repos/slstatus; }))
+    (slstatus.overrideAttrs (_: { src = /home/nikola/repos/suckless/my-slstatus; }))
     nitrogen
     feh
     xterm
