@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, ... }:
+{ config, pkgs, stdenv, ... }:
 
 {
   imports =
@@ -44,19 +44,32 @@
 
   # Enable the X11 windowing system.
   services.xserver.enable = true;
-
+  services.xserver.resolutions = [ { x = 1280; y = 960; } ];
 
   # Enable the GNOME Desktop Environment.
-  services.xserver.displayManager.gdm.enable = true;
+  services.xserver.displayManager.gdm.enable = false;
   # services.xserver.displayManager.sddm.enable = true;
   # services.xserver.desktopManager.gnome.enable = true;
   services.xserver.windowManager.dwm.enable = true; 
   
+  services.xserver.displayManager = {
+        lightdm.enable = true;
+        #lightdm.autoLogin.user = "nikola";
+        sessionCommands = ''
+	  sh /home/nikola/.screenlayout/vm.sh &
+          nitrogen --restore &
+	  slstatus &
+        '';
+      };
+
+
+
   nixpkgs.overlays = [
     (final: prev: {
       dwm = prev.dwm.overrideAttrs (old: { src = /home/nikola/repos/suckless/my-dwm ;});
     })
   ];
+
 
   # Configure keymap in X11
   services.xserver.layout = "us";
@@ -94,6 +107,7 @@
     feh
     xterm
     zsh
+    oh-my-zsh
     alacritty
     xfce.thunar
     chromium
@@ -105,7 +119,14 @@
     exa
     fzf
     fzf-zsh
+    lxappearance
+    curl
+    python3
+    neovim
+    starship
  ];
+
+
 
  virtualisation.docker.enable = true;
 

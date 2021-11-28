@@ -73,7 +73,7 @@ ZSH_THEME="af-magic"
 # plugins=(git)
 plugins=(git extract web-search yum git-extras docker vagrant docker-compose zsh-autosuggestions tmux)
 
-source $ZSH/oh-my-zsh.sh
+#source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
@@ -107,3 +107,5 @@ alias upg='sudo apt upgrade '
 alias upgl='sudo apt list --upgradable '
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+eval "$(starship init zsh)"
