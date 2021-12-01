@@ -124,6 +124,7 @@
     python3
     neovim
     starship
+    fsearch
  ];
 
 

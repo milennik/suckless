@@ -8,10 +8,10 @@ static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = {  "Noto Sans Mono:size=12" };
 static const char dmenufont[]       =  "Noto Sans Mono:size=12" ;
 static const char col_gray1[]       = "#1e1c31"; /*bar background*/
-static const char col_gray2[]       = "#a6b3cc"; /*inactive border*/
+static const char col_gray2[]       = "#65b2ff"; /*inactive border*/
 static const char col_gray3[]       = "#65b2ff"; /*workspace and slstatus*/
 static const char col_gray4[]       = "#1e1c31"; /*title font*/
-static const char col_cyan[]        = "#65b2ff"; /*title and active border*/
+static const char col_cyan[]        = "#ffb378"; /*title and active border*/
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
