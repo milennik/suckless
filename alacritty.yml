@@ -1,88 +1,31 @@
-# Font configuration
-font:
-  # Normal (roman) font face
-  normal:
-    # Font family
-    #
-    #Default:
-    #   - (macOS) Menlo
-    #   - (Linux/BSD) monospace
-    #   - (Windows) Consolas
-    family: FuraMono Nerd Font Mono
-
-    # The `style` can be specified to pick a specific face.
-    style: Regular
-
-  # Bold font face
-  bold:
-    # Font family
-    #
-    # If the bold family is not specified, it will fall back to the
-    # value specified for the normal font.
-    family:  FuraMono Nerd Font Mono
-
-    # The `style` can be specified to pick a specific face.
-    style: Bold
-
-  # Italic font face
-  italic:
-    # Font family
-    #
-    # If the italic family is not specified, it will fall back to the
-    # value specified for the normal font.
-    family:  FuraMono Nerd Font Mono
-
-    # The `style` can be specified to pick a specific face.
-    style: Italic
-
-  # Bold italic font face
-  bold_italic:
-    # Font family
-    #
-    # If the bold italic family is not specified, it will fall back to the
-    # value specified for the normal font.
-    family:  FuraMono Nerd Font Mono
-
-    # The `style` can be specified to pick a specific face.
-    style: Bold Italic
-
-  # Point size
-  size: 11.0
-# Colors (SeaShells)
-# Source : https://raw.githubusercontent.com/mbadolato/iTerm2-Color-Schemes/master/schemes/SeaShells.itermcolors
+   
+# Colors (Challenger Deep)
 colors:
   # Default colors
   primary:
-    background: '#061923'
-    foreground: '#e5c49e'
-
+    background: '0x1e1c31'
+    foreground: '0xcbe1e7'
   # Colors the cursor will use if `custom_cursor_colors` is true
   cursor:
-    text: '#061822'
-    cursor: '#feaf3c'
-
-  selection:
-    text: '#ffe9d7'
-    background: '#265b75'
-
+    text: '0xff271d'
+    cursor: '0xfbfcfc'
   # Normal colors
   normal:
-    black: '#1d485f'
-    red: '#db662d'
-    green: '#008eab'
-    yellow: '#feaf3c'
-    blue: '#255a62'
-    magenta: '#77dbf4'
-    cyan: '#5fb1c2'
-    white: '#e5c49e'
-
+    black:   '0x141228'
+    red:     '0xff5458'
+    green:   '0x62d196'
+    yellow:  '0xffb378'
+    blue:    '0x65b2ff'
+    magenta: '0x906cff'
+    cyan:    '0x63f2f1'
+    white:   '0xa6b3cc'
   # Bright colors
   bright:
-    black: '#545d65'
-    red: '#dd998a'
-    green: '#739da8'
-    yellow: '#fedaae'
-    blue: '#0bc7e3'
-    magenta: '#c6e8f1'
-    cyan: '#97b9c0'
-    white: '#ffe9d7'
+    black:   '0x565575'
+    red:     '0xff8080'
+    green:   '0x95ffa4'
+    yellow:  '0xffe9aa'
+    blue:    '0x91ddff'
+    magenta: '0xc991e1'
+    cyan:    '0xaaffe4'
+    white:   '0xcbe3e7'
