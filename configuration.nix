@@ -125,6 +125,9 @@
     neovim
     starship
     fsearch
+    killall
+    simplescreenrecorder
+    ranger
  ];
 
 
