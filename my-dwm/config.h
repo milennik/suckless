@@ -7,11 +7,11 @@ static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = {  "Noto Sans Mono:size=12" };
 static const char dmenufont[]       =  "Noto Sans Mono:size=12" ;
-static const char col_gray1[]       = "#1d2021";
-static const char col_gray2[]       = "#32302f";
-static const char col_gray3[]       = "#d4be98";
-static const char col_gray4[]       = "#32302f";
-static const char col_cyan[]        = "#d8a657";
+static const char col_gray1[]       = "#282a36"; /*bar background*/
+static const char col_gray2[]       = "#8be9fd"; /*inactive border*/
+static const char col_gray3[]       = "#caa9fa"; /*workspace and slstatus*/
+static const char col_gray4[]       = "#282a35"; /*title font*/
+static const char col_cyan[]        = "#caa9fa"; /*title and active border*/
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
