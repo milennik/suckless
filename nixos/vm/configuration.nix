@@ -56,9 +56,9 @@
         lightdm.enable = true;
         #lightdm.autoLogin.user = "nikola";
         sessionCommands = ''
-	  sh /home/nikola/.screenlayout/vm.sh &
-          nitrogen --restore &
-	  slstatus &
+	      sh /home/nikola/.screenlayout/duo.sh &
+        nitrogen --restore &
+	      slstatus &
         '';
       };
 

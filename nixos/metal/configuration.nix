@@ -56,9 +56,9 @@
   services.xserver.displayManager = {
         lightdm.enable = true;
         sessionCommands = ''
-	  sh /home/nikola/.screenlayout/vm.sh &
-          nitrogen --restore &
-	  slstatus &
+	      sh /home/nikola/.screenlayout/duo.sh &
+        nitrogen --restore &
+	      slstatus &
         '';
       };
 
