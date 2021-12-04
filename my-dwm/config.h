@@ -73,8 +73,8 @@ static Key keys[] = {
 	{ MODKEY,        		     	XK_c, 	   spawn,          {.v = vsc } },
 	{ MODKEY,        				XK_o, 	   spawn,          {.v = changelayout } },
 	{ MODKEY,        				XK_p, 	   spawn,          {.v = powermenu } },
-	{ MODKEY, 	       				XK_F12,    spawn,          SHCMD("pactl set-sink-volume 0 +1%") },
-	{ MODKEY,	        			XK_F11,    spawn,          SHCMD("pactl set-sink-volume 0 -1%") },
+	{ MODKEY, 	       				XK_Up,    spawn,          SHCMD("pactl set-sink-volume 0 +5%") },
+	{ MODKEY,	        			XK_Down,    spawn,          SHCMD("pactl set-sink-volume 0 -5%") },
 	{ 0,  							XK_Print,  spawn,      	   SHCMD("flameshot gui") },
 
 	// { MODKEY,                       XK_b,      togglebar,      {0} },
