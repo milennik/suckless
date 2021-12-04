@@ -1,3 +1,4 @@
+
 # Edit this configuration file to define what should be installed on
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
@@ -29,7 +30,7 @@
   # Per-interface useDHCP will be mandatory in the future, so this generated config
   # replicates the default behaviour.
   networking.useDHCP = false;
-  networking.interfaces.enp0s3.useDHCP = true;
+  networking.interfaces.enp3s0.useDHCP = true;
 
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";
@@ -44,7 +45,7 @@
 
   # Enable the X11 windowing system.
   services.xserver.enable = true;
-  services.xserver.resolutions = [ { x = 1280; y = 960; } ];
+  # services.xserver.resolutions = [ { x = 1280; y = 960; } ];
 
   # Enable the GNOME Desktop Environment.
   services.xserver.displayManager.gdm.enable = false;
@@ -54,7 +55,6 @@
   
   services.xserver.displayManager = {
         lightdm.enable = true;
-        #lightdm.autoLogin.user = "nikola";
         sessionCommands = ''
 	  sh /home/nikola/.screenlayout/vm.sh &
           nitrogen --restore &
@@ -124,7 +124,6 @@
     python3
     neovim
     starship
-    fsearch
     killall
     simplescreenrecorder
     ranger
@@ -162,4 +161,9 @@
   system.stateVersion = "21.05"; # Did you read the comment?
 
 }
+
+
+
+
+
 
