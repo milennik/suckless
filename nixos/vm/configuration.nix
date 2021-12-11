@@ -127,10 +127,13 @@
     killall
     simplescreenrecorder
     ranger
+    flameshot
+    signal-desktop
+    lua
  ];
 
 
-
+ programs.slock.enable = true;
  virtualisation.docker.enable = true;
 
   # Some programs need SUID wrappers, can be configured further or are
