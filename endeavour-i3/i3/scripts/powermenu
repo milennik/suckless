@@ -116,9 +116,9 @@ typeset -A menu
 menu=(
   [ Shutdown]="systemctl poweroff"
   [ Reboot]="systemctl reboot"
-  [ Suspend]="systemctl suspend"
-  [ Hibernate]="systemctl hibernate"
-  [ Lock]="~/.config/i3/scripts/blur-lock.sh"
+  # [ Suspend]="systemctl suspend"
+  # [ Hibernate]="systemctl hibernate"
+  [ Lock]="slock"
   [ Logout]="i3-msg exit"
   [ Cancel]=""
 )

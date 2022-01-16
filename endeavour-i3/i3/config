@@ -48,14 +48,14 @@ workspace_layout default
 ##############################
 
 #border indicator on windows:
-new_window pixel 3
+new_window pixel 6
 
 # thin borders
 # hide_edge_borders both
 
 # Set inner/outer gaps
-gaps inner 6
-gaps outer 3
+gaps inner 0
+gaps outer 0
 
 # show window title bars (not officially supported with i3gaps)
 #default_border normal
@@ -138,6 +138,12 @@ bindcode $mod+Shift+80 	 move container to workspace  $ws8
 bindcode $mod+Shift+81 	 move container to workspace  $ws9
 bindcode $mod+Shift+90 	 move container to workspace  $ws10
 
+bindsym $mod+Ctrl+Right resize shrink width 1 px or 1 ppt
+bindsym $mod+Ctrl+Up resize grow height 1 px or 1 ppt
+bindsym $mod+Ctrl+Down resize shrink height 1 px or 1 ppt
+bindsym $mod+Ctrl+Left resize grow width 1 px or 1 ppt
+
+
 # resize window (you can also use the mouse for that):
 #mode "resize" {
 # These bindings trigger as soon as you enter the resize mode
@@ -168,7 +174,7 @@ bindcode $mod+Shift+90 	 move container to workspace  $ws10
 ######################################
 
 # start a terminal
-bindsym $mod+Return exec xfce4-terminal
+bindsym $mod+Return exec urxvt
 
 # kill focused window
 bindsym $mod+q kill
@@ -180,7 +186,7 @@ bindsym $mod+Shift+e exec ~/.config/i3/scripts/powermenu
 # lock with a picture:
 #bindsym $mod+l exec i3lock -i  ~/.config/i3/i3-lock-screen.png -p default|win -t
 # lock by blurring the screen:
-bindsym $mod+l exec ~/.config/i3/scripts/blur-lock
+bindsym $mod+l exec slock
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -278,12 +284,13 @@ bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
 # Redirect sound to headphones
-bindsym $mod+p exec /usr/local/bin/switch-audio-port
+# bindsym $mod+p exec /usr/local/bin/switch-audio-port
 
 ## App shortcuts
 bindsym $mod+w exec /usr/bin/firefox
 bindsym $mod+n exec /usr/bin/thunar
-bindsym Print exec "scrot ~/%Y-%m-%d-%T-screenshot.png"
+bindsym Print exec "flameshot gui"
+bindsym $mod+c exec vscodium
 
 ##########################################
 # configuration for workspace behaviour: #
@@ -312,18 +319,14 @@ set $ws10 "10"
 #workspace $ws5 output HDMI-0
 
 # bind program to workspace and focus to them on startup:
-assign [class="Xfce4-terminal"] $ws1
-assign [class="(?i)firefox"] $ws2
-assign [class="Thunar"] $ws3
-assign [class="Thunderbird"] $ws4
-assign [class="TelegramDesktop"] $ws5
+# assign [class="Xfce4-terminal"] $ws1
+# assign [class="(?i)firefox"] $ws2
+# assign [class="Thunar"] $ws3
 
 # automatic set focus new window if it opens on another workspace then the current:
-for_window [class=Xfce4-terminal] focus
-for_window [class=(?i)firefox] focus
-for_window [class=Thunar] focus
-for_window [class=Thunderbird] focus
-for_window [class=TelegramDesktop] focus
+# for_window [class=Xfce4-terminal] focus
+# for_window [class=(?i)firefox] focus
+# for_window [class=Thunar] focus
 
 ##############
 # compositor #
@@ -444,21 +447,21 @@ for_window [window_role="About"] floating enable
 ######################################
 
 # Define colors variables:
-set $darkbluetrans	#08052be6
-set $darkblue		#08052b
-set $lightblue		#5294e2
-set $urgentred		#e53935
+set $darkbluetrans	#1d2021
+set $darkblue		#1d2021
+set $lightblue		#8ec07c
+set $urgentred		#d65d0e
 set $white		#ffffff
 set $black		#000000
-set $purple		#e345ff
-set $darkgrey		#383c4a
-set $grey		#b0b5bd
-set $mediumgrey		#8b8b8b
-set $yellowbrown	#e1b700
+set $purple		#d3869b
+set $darkgrey		#1d2021
+set $grey		#665c54
+set $mediumgrey		#3c3836
+set $yellowbrown	#fabd2f
 
 # define colors for windows:
 #class		        	border		bground		text		indicator	child_border
-client.focused		    $lightblue	$darkblue	$white		$purple		$purple
+client.focused		    $lightblue	$darkblue	$white		$lightblue		$yellowbrown
 client.unfocused	    $darkblue	$darkblue	$grey		$purple		$darkgrey
 client.focused_inactive	$darkblue	$darkblue	$grey		$purple		$black
 client.urgent		    $urgentred	$urgentred	$white		$purple		$yellowbrown
@@ -470,7 +473,7 @@ client.urgent		    $urgentred	$urgentred	$white		$purple		$yellowbrown
 # Start i3bar to display a workspace bar
 # (plus the system information i3status finds out, if available)
 bar {
-		font pango:Noto Sans Regular 10, FontAwesome 10
+		font pango:Noto Sans Regular 12, FontAwesome 12
 		status_command i3blocks -c ~/.config/i3/i3blocks.conf
 	    	position top
 #	    	i3bar_command i3bar --transparency
