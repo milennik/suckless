@@ -15,7 +15,7 @@ configuration {
 
 /*@import "~/.config/rofi/arc_dark_transparent_colors.rasi"*/
 /*@import "~/.config/rofi/themes/gruvbox/gruvbox-dark-hard.rasi"*/
-@import "~/.config/rofi/themes/nord.rasi"
+@import "~/.config/rofi/themes/palenight.rasi"
 window {
     background-color: @background;
     border:           0;
