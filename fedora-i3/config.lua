@@ -91,8 +91,8 @@ lvim.lsp.automatic_servers_installation = false
 local opts = {} -- check the lspconfig documentation for a list of all possible options
 require("lvim.lsp.manager").setup("pylsp", opts)
 
--- ocal opts = {} -- check the lspconfig documentation for a list of all possible options
--- equire("lvim.lsp.manager").setup("gopls", opts)
+--local opts = {} -- check the lspconfig documentation for a list of all possible options
+--equire("lvim.lsp.manager").setup("gopls", opts)
 
 
 -- -- you can set a custom on_attach function that will be used for all the language servers

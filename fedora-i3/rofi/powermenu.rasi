@@ -3,7 +3,8 @@
  * Maintainer: joekamprad <joekamprad@endeavouros.com>
  *******************************************************/
 configuration {
-    font:                           "Sourcecode Pro Regular 10";
+    /* font:                           "Sourcecode Pro Regular 10"; */
+    font:				"Liga Monego 12";
     show-icons:                     false;
     icon-theme: 		    "Arc-X-D";
     scroll-method:                  0;
