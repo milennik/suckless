@@ -5,7 +5,7 @@
 configuration {
     /* font:				"Sourcecode Pro Regular 10"; */
     font:				"Liga Monego 12";
-    show-icons:				true;
+    show-icons:				false;
     icon-theme:				"Arc-X-D";
     display-drun:			"Apps";
     drun-display-format:		"{name}";
@@ -16,7 +16,7 @@ configuration {
 
 /*@import "~/.config/rofi/arc_dark_transparent_colors.rasi"*/
 /*@import "~/.config/rofi/themes/gruvbox/gruvbox-dark-hard.rasi"*/
-@import "~/.config/rofi/themes/palenight.rasi"
+@import "~/.config/rofi/themes/gruvbox.rasi"
 window {
     background-color: @background;
     border:           0;

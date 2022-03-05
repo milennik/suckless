@@ -124,7 +124,10 @@ export GOPATH=$(go env GOPATH)
 export PATH=$PATH:$(go env GOPATH)/bin
 export PATH=$PATH:$GOPATH/bin
 export EDITOR='vi' 
+export DOTNET_CLI_TELEMETRY_OPTOUT=1
 
+
+alias su='sudo -i'
 alias v='/home/nikola/.local/bin/lvim .'
 alias ll='exa -al --color=always --group-directories-first'
 alias ls='ls --color -a'

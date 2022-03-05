@@ -139,10 +139,10 @@ bindcode $mod+Shift+80 	 move container to workspace  $ws8
 bindcode $mod+Shift+81 	 move container to workspace  $ws9
 bindcode $mod+Shift+90 	 move container to workspace  $ws10
 
-bindsym $mod+Ctrl+Right resize shrink width 1 px or 1 ppt
-bindsym $mod+Ctrl+Up resize grow height 1 px or 1 ppt
-bindsym $mod+Ctrl+Down resize shrink height 1 px or 1 ppt
-bindsym $mod+Ctrl+Left resize grow width 1 px or 1 ppt
+bindsym $mod+Ctrl+Right resize shrink width 10 px or 10 ppt
+bindsym $mod+Ctrl+Up resize grow height 10 px or 10 ppt
+bindsym $mod+Ctrl+Down resize shrink height 10 px or 10 ppt
+bindsym $mod+Ctrl+Left resize grow width 10 px or 10 ppt
 
 
 # resize window (you can also use the mouse for that):
@@ -175,7 +175,7 @@ bindsym $mod+Ctrl+Left resize grow width 1 px or 1 ppt
 ######################################
 
 # start a terminal
-bindsym $mod+Return exec alacritty
+bindsym $mod+Return exec --no-startup-id alacritty
 
 # kill focused window
 bindsym $mod+q kill
@@ -354,7 +354,7 @@ set $ws10 "10"
 #
 # picom: https://wiki.archlinux.org/title/Picom
 # manpage: https://man.archlinux.org/man/picom.1.en
-#exec --no-startup-id picom -b
+exec --no-startup-id picom -b
 
 #############################################
 # autostart applications/services on login: #
@@ -454,17 +454,17 @@ for_window [window_role="About"] floating enable
 ######################################
 
 # Define colors variables:
-set $darkbluetrans	#ffffff
-set $darkblue		#292d3e
-set $lightblue		#c3e88d
-set $urgentred		#f78c6c
-set $white		#ffffff
-set $black		#292d3e
-set $purple		#c792ea
-set $darkgrey		#292d3e 
-set $grey		#4C566A
-set $mediumgrey		#3c3836
-set $yellowbrown	#82aaff
+set $darkbluetrans	#ebdbb2
+set $darkblue		#282828
+set $lightblue		#d3869b 
+set $urgentred		#cc241d
+set $white		#ebdbb2
+set $black		#282828
+set $purple		#fabd2f
+set $darkgrey		#282828 
+set $grey		#665c54
+set $mediumgrey		#928374
+set $yellowbrown	#b8bb26
 
 # define colors for windows:
 #class		        	border		bground		text		indicator	child_border
@@ -548,7 +548,7 @@ bindsym $mod+d exec rofi -modi drun -show drun \
 		-config ~/.config/rofi/rofidmenu.rasi
 
 # bindsym $mod+Shift+d exec dmenu_run
-bindsym $mod+Shift+d exec --no-startup-id dmenu_run  -fn 'Liga Monego-12'  -nb '#292d3e' -sf '#292d3e' -sb '#82aaff' -nf '#82aaff'
+bindsym $mod+Shift+d exec --no-startup-id dmenu_run  -fn 'Liga Monego-12'  -nb '#282828' -sf '#282828' -sb '#b8bb26' -nf '#b8bb26'
 
 #bindsym F9 exec rofi -modi drun -show drun \
 #		-config ~/.config/rofi/rofidmenu.rasi

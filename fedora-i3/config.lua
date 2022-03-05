@@ -11,7 +11,7 @@ an executable
 -- general
 lvim.log.level = "warn"
 lvim.format_on_save = true
-lvim.colorscheme = "palenight"
+lvim.colorscheme = "gruvbox"
 
 -- keymappings [view all the defaults by pressing <leader>Lk]
 lvim.leader = "space"
@@ -59,7 +59,7 @@ lvim.builtin.notify.active = true
 lvim.builtin.terminal.active = true
 lvim.builtin.nvimtree.setup.view.side = "right"
 lvim.builtin.nvimtree.show_icons.git = 0
-vim.opt.relativenumber = true 
+vim.opt.relativenumber = true
 -- if you don't want all the parsers change this to a table of the ones you want
 lvim.builtin.treesitter.ensure_installed = {
   "bash",
@@ -141,13 +141,15 @@ require("lvim.lsp.manager").setup("pylsp", opts)
 
 -- additional plugins
 lvim.plugins = {
-    {"folke/tokyonight.nvim"},
-    {"morhetz/gruvbox"},
-    {"ayu-theme/ayu-vim"},
-    {"shaunsingh/nord.nvim"},
-    {"rebelot/kanagawa.nvim"},
-    {"drewtempelmeyer/palenight.vim"},
-    {"ray-x/go.nvim"},
+    { "folke/tokyonight.nvim" },
+    { "morhetz/gruvbox" },
+    { "ayu-theme/ayu-vim" },
+    { "shaunsingh/nord.nvim" },
+    { "rebelot/kanagawa.nvim" },
+    { "drewtempelmeyer/palenight.vim" },
+    { "ray-x/go.nvim" },
+    { "ap/vim-css-color" },
+    { "xiyaowong/nvim-transparent" },
     {
       "folke/trouble.nvim",
       cmd = "troubletoggle",
@@ -158,3 +160,18 @@ lvim.plugins = {
 -- lvim.autocommands.custom_groups = {
 --   { "BufWinEnter", "*.lua", "setlocal ts=8 sw=8" },
 -- }
+require("transparent").setup({
+  enable = true, -- boolean: enable transparent
+  extra_groups = { -- table/string: additional groups that should be clear
+                   -- In particular, when you set it to 'all', that means all avaliable groups
+
+                   -- example of akinsho/nvim-bufferline.lua
+                   "BufferLineTabClose",
+                   "BufferlineBufferSelected",
+                   "BufferLineFill",
+                   "BufferLineBackground",
+                   "BufferLineSeparator",
+                   "BufferLineIndicatorSelected",
+  },
+  exclude = {}, -- table: groups you don't want to clear
+})
