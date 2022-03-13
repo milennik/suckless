@@ -169,7 +169,7 @@ n ()
     # stty lwrap undef
     # stty lnext undef
 
-    nnn -Hde "$@"
+    nnn -e "$@"
 
     if [ -f "$NNN_TMPFILE" ]; then
             . "$NNN_TMPFILE"
